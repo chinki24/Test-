@@ -1,0 +1,21 @@
+hrs = input("Enter Hours: ")
+rate = input("Enter rate: ")
+h = float(hrs)
+r = float(rate)
+
+def computepay(h,r):
+    pay = h*r
+    return pay
+
+if h<=40:
+    print("Pay",computepay(h,r))
+
+
+elif h>40:
+    actual = 40*r
+    extra_hrs = (h-40)
+    #print(extra_hrs)
+    addon = (extra_hrs*r)*1.5
+    #print(addon)
+    pay=actual+addon
+    print("Pay",pay)
